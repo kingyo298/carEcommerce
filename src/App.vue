@@ -211,16 +211,16 @@
         });
       },
       sortCars(){
-        if(this.selectedSort === "1"){
-          return this.priceLowToHigh;
+        switch(this.selectedSort){
+          case "1":
+            return this.priceLowToHigh;
+          case "2":
+            return this.priceHighToLow;
+          case "3":
+            return this.sortByDate;
+          default :
+            return;
         }
-        if(this.selectedSort === "2"){
-          return this.priceHighToLow;
-        }
-        if(this.selectedSort === "3"){
-          return this.sortByDate;
-        }
-        return;
       },
       matchedCar(){
         if(this.selectedCategory === "-1"){
